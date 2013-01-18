@@ -77,6 +77,19 @@ xkb_symbols "bksl" {
     key <BKSL>	{ [ backslash,        bar,        slash,     NoSymbol ]	};
 };
 
+// Add czech quotation marks and ellipsis under AltGr.
+// 2013, Lukáš Lánský <lukas@lansky.name>
+xkb_symbols "extended" {
+    include "cz(basic)"
+    name[Group1]= "Czech (extended)";
+
+    key <AD10>  { [         p,          P,        U2026,  NoSymbol ] };
+    key <AC10>  { [     uring,   quotedbl,        U201E,     U201A ] };
+    key <AC11>  { [   section,     exclam,        U201C,     U2018 ] };
+    key <AB08>	{ [     comma,   question,         less,     U00BB ] };
+    key <AB09>	{ [    period,      colon,      greater,     U00AB ] };
+};
+
 partial alphanumeric_keys 
 xkb_symbols "qwerty" {
  
